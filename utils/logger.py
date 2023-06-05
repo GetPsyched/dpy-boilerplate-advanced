@@ -14,7 +14,7 @@ class InfoHandler(logging.Handler):
         self.setFormatter(discord.utils._ColourFormatter())
 
     def emit(self, record: logging.LogRecord) -> None:
-        if record.levelno <= self.max_level or getenv("DEV"):
+        if record.levelno <= self.max_level or getenv("DEV") == "1":
             print(self.format(record))
 
 

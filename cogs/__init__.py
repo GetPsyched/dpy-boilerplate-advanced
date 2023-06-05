@@ -4,7 +4,7 @@ ALL_EXTENSIONS = [
     "cogs.owner",
 ]
 
-if getenv("dev") == 1:
+if getenv("DEV") == "1":
     INITIAL_EXTENSIONS = [
         "cogs.owner",
         # "cogs.",

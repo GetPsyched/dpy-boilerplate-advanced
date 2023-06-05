@@ -53,7 +53,7 @@ class AdvancedBot(commands.Bot):
         """Return the bot's prefix for a guild or a DM"""
         await bot.wait_until_ready()
 
-        if os.getenv("DEV"):
+        if os.getenv("DEV") == "1":
             DEFAULT_PREFIX = "!"
         else:
             DEFAULT_PREFIX = "%"
@@ -123,7 +123,7 @@ async def main():
     )
 
     async with session, pool, bot:
-        if os.getenv("DEV"):
+        if os.getenv("DEV") == "1":
             await bot.start(dev_bot_token)
         else:
             await bot.start(bot_token)
