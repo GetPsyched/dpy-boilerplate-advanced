@@ -2,11 +2,13 @@ from os import getenv
 
 ALL_EXTENSIONS = [
     "cogs.owner",
+    "cogs.error",
 ]
 
 if getenv("DEV") == "1":
     INITIAL_EXTENSIONS = [
         "cogs.owner",
+        "cogs.error",
         # "cogs.",
     ]
 else:
