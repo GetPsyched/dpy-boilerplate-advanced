@@ -101,8 +101,6 @@ class AdvancedBot(commands.Bot):
 
 async def main():
     dev_bot_token = os.getenv("DEV_BOT_TOKEN")
-    assert dev_bot_token is not None
-
     bot_token = os.getenv("BOT_TOKEN")
     assert bot_token is not None
 
@@ -124,6 +122,7 @@ async def main():
 
     async with session, pool, bot:
         if os.getenv("DEV") == "1":
+            assert dev_bot_token is not None
             await bot.start(dev_bot_token)
         else:
             await bot.start(bot_token)
