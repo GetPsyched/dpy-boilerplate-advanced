@@ -111,7 +111,9 @@ async def main():
     discord.utils.setup_logging(level=logging.INFO, root=False)
 
     pool = asyncpg.create_pool(
-        dsn=os.getenv("DATABASE_URL"), command_timeout=60, max_inactive_connection_lifetime=0
+        dsn=os.getenv("DATABASE_URL"),
+        command_timeout=60,
+        max_inactive_connection_lifetime=0,
     )
     session = ClientSession()
     bot = AdvancedBot(
