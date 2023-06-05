@@ -3,6 +3,7 @@ from os import getenv
 ALL_EXTENSIONS = [
     "cogs.owner",
     "cogs.error",
+    "cogs.help",
 ]
 
 if getenv("DEV") == "1":
