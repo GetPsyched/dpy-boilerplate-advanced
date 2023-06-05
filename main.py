@@ -7,10 +7,14 @@ from aiohttp import ClientSession
 import asyncpg
 import discord
 from discord.ext import commands
+from dotenv import load_dotenv
+
 
 import cogs
 from base.context import CustomContext
 from utils.logger import ErrorHandler, InfoHandler
+
+load_dotenv()
 
 
 class AdvancedBot(commands.Bot):
