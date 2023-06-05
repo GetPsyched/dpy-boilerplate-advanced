@@ -51,7 +51,6 @@ class ErrorHandler(logging.Handler):
             self.webhook.send(
                 embed=embed,
                 silent=record.levelno < logging.CRITICAL,
-                username="Hyperlink Status",
             ),
             self.loop,
         )
