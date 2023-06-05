@@ -32,7 +32,8 @@ class AdvancedBot(commands.Bot):
         # instead of using discord.Intents.all()
         intents = discord.Intents(
             guilds=True,
-            members=True,
+            messages=True,
+            message_content=True,
             # TODO: Add specific intents as you like
             # Ref: https://discordpy.readthedocs.io/en/stable/api.html#discord.Intents
         )
