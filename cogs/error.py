@@ -12,7 +12,6 @@ class Errors(BaseCog):
 
     def __init__(self, bot: AdvancedBot):
         super().__init__(bot)
-        print(0)
         self.bot.tree.on_error = self.on_app_command_error
 
     @commands.Cog.listener()
@@ -22,7 +21,6 @@ class Errors(BaseCog):
         error: commands.CommandError,
     ):
         """Handle prefix command errors here."""
-        print(1)
         self.logger.exception(error)
         raise error
 
